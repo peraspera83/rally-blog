@@ -48,6 +48,33 @@ header div {
 }
 */
 
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.label {
+  width: 50px;
+  height: 29px;
+  background-color: #111;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 30px;
+  padding: 6px;
+  position: relative;
+}
+
+.switcher {
+  background-color: #fff;
+  position: absolute;
+  top: 5px;
+  left: 2px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
+
 nav {
   grid-area: nav;
   background-color: #E94560;
@@ -80,52 +107,31 @@ logo-bar {
 }
 
 .logo1 {
-  animation-name: logoanim1;
+  animation-name: logoanim;
   animation-delay: 7.5s;
 }
 .logo2 {
-  animation-name: logoanim2;
+  animation-name: logoanim;
   animation-delay: 6s;
 }
 .logo3 {
-  animation-name: logoanim3;
+  animation-name: logoanim;
   animation-delay: 4.5s;
 }
 .logo4 {
-  animation-name: logoanim4;
+  animation-name: logoanim;
   animation-delay: 3s;
 }
 .logo5 {
-  animation-name: logoanim5;
+  animation-name: logoanim;
   animation-delay: 1.5s;
 }
 .logo6 {
-  animation-name: logoanim6;
+  animation-name: logoanim;
   animation-delay: 0s;
 }
 
-@keyframes logoanim1 {
-  0%   {left:-25%;}
-  100% {left:100%;}
-}
-@keyframes logoanim2 {
-  0%   {left:-25%;}
-  100% {left:100%;}
-}
-
-@keyframes logoanim3 {
-  0%   {left:-25%;}
-  100% {left:100%;}
-}
-@keyframes logoanim4 {
-  0%   {left:-25%;}
-  100% {left:100%;}
-}
-@keyframes logoanim5 {
-  0%   {left:-25%;}
-  100% {left:100%;}
-}
-@keyframes logoanim6 {
+@keyframes logoanim {
   0%   {left:-25%;}
   100% {left:100%;}
 }
@@ -151,6 +157,19 @@ main {
   margin-left: 0.5rem;
 }
 
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 2%;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 50%;
+  max-width: 50%;
+  padding: 1% 2%;
+}
+
 ecom {
   grid-area: ecom;
   margin-right: 0.5rem;
@@ -163,15 +182,17 @@ ecom {
   margin-top: 100px;
   background-color: rgb(255, 255, 255);
   border-radius: 4px;
+  /*
   display: flex;
   flex-wrap: wrap;
+  */
   gap: 10px;
   overflow: hidden;
 }
 
 .yt-container {
   flex: 50%;
-  overflow: hidden;
+  margin: 10px 0px 10px 0px;
   position: relative;
   padding-bottom: 56.25%;
   height: 0;
@@ -216,6 +237,7 @@ footer {
 
 .image img {
   border-bottom: 15px solid #E94560;
+  width: 100%;
 }
 
 .image h1 {
@@ -316,3 +338,42 @@ button:focus {
 }
 
 */
+
+
+.mySlides1, .mySlides2 {display: none;}
+.mySlides1 > img {vertical-align: middle;}
+.mySlides2 > img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a grey background color */
+.prev:hover, .next:hover {
+  background-color: #f1f1f1;
+  color: black;
